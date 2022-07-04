@@ -10,10 +10,11 @@ class Board extends React.Component {
         };
     }
 
-    handleClick(e){
-        const table = this.state.squares.slice();
-        table[e] = 'X';
-        this.setState({squares: table});
+    handleClick (e) {
+        const updatedSquares = this.state.squares.slice();
+        updatedSquares[e] = 'X';
+        console.log(updatedSquares)
+        this.setState({squares: updatedSquares});
     }
 
     renderSquare(e) {

@@ -5,7 +5,7 @@ class Square extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: null,
+            value: '-',
         };
     }
 
@@ -15,8 +15,8 @@ class Square extends React.Component {
             <button
                 className="square"
                 onClick={async () => {
-                    await this.props.onClick;
-                    console.log(this.props.value)
+                    await this.props.onClick();
+                    //console.log(this.props.value)
                 }}>
                 {this.state.value}
             </button>
