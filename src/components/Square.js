@@ -18,7 +18,9 @@ class Square extends React.Component {
                     await this.props.onClick();
                     //console.log(this.props.value)
                 }}>
-                {this.state.value}
+                {this.props.value === "X" || this.props.value === "O"
+                    ? this.props.value
+                    : this.state.value}
             </button>
 
         );
