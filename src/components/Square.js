@@ -1,12 +1,18 @@
 import React from 'react';
 
-class Square extends React.Component {
+export class Square extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             value: '-',
         };
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.value !== this.props.value && this.state.value === '-') {
+            this.setState({ value: this.props.value });
+        }
     }
 
     render() {
@@ -18,14 +24,11 @@ class Square extends React.Component {
                     await this.props.onClick();
                     //console.log(this.props.value)
                 }}>
-                {this.props.value === "X" || this.props.value === "O"
-                    ? this.props.value
-                    : this.state.value}
+                {this.state.value}
             </button>
 
         );
     }
-
 }
 
 export default Square;
