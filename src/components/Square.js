@@ -1,34 +1,11 @@
-import React from 'react';
+import '../App.css'
 
-export class Square extends React.Component {
+function Square(props) {
+    return (
+        <button className="Square" onClick={props.onClick}>
+        {props.value}
+      </button>
+    );
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: '-',
-        };
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.value !== this.props.value && this.state.value === '-') {
-            this.setState({ value: this.props.value });
-        }
-    }
-
-    render() {
-        return (
-
-            <button
-                className="square"
-                onClick={async () => {
-                    await this.props.onClick();
-                    //console.log(this.props.value)
-                }}>
-                {this.state.value}
-            </button>
-
-        );
-    }
-}
-
-export default Square;
+  export default Square;
