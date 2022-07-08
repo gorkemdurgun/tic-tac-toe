@@ -5,4 +5,25 @@
 .Square{
   width: 30px;
   height: 30px;
+  margin: 1px;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  border-color: white;
+  color: blue;
+  font-weight: bold;
+}
+
+.Game{
+  margin: 10px;
+}
+
+.History{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin: 6px;
+  background-color: yellow;
+  border: none;
 }
